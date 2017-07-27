@@ -1,5 +1,4 @@
 
-
 .jumbotron{
     background-image:url("images/back.png");
   text-align: center;
@@ -12,6 +11,9 @@
     padding:10px 25px;
     background-color:grey;
     color:white;
+}
+form label{
+    margin-right:15px;
 }
 a img{
     border: 5px solid lightgrey;
@@ -26,10 +28,10 @@ a img:hover{
 .form-style{
     padding:20px;
      background-color:lightsteelblue;
+}
     
-     }
-#button{
-    margin-left:20px;
+form label{
+    margin-right:15px;
 }
 
 tbody tr:nth-child(odd) {

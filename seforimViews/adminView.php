@@ -22,10 +22,10 @@
 
             <label class="sr-only" for="price">Price</label>
             <input type="number" class="form-control mb-2 mr-sm-2 mb-sm-0" id="price" name="price" placeholder="New Sefer Price:" required>
-            <button type="submit" name="insert" class="btn btn-primary button">Insert New Sefer</button>
+            <button id="button" type="submit" name="insert" class="btn btn-primary button">Insert New Sefer</button>
         </form>
-        <?php if(isset($_POST['insert'])):?>
-            <h2><?=$seferName?> for <?=$seferPrice?> was inserted into your database"</h2>;
+        <?php if($inserted === true):?>
+            <h5><?=strtoupper($seferName)?> for <?=$seferPrice?> was inserted into your database"</h5>;
         <?php endif ?>
         <form class="form-inline form-style" method="POST">
             <div class="form-group">
@@ -38,14 +38,14 @@
                     ?>
                 </select>
                 <button id="button" type="submit" name="getPrice" class="btn btn-primary">Get Price</button>
-                <?php if(isset($_POST["getPrice"])):?>
-                <h5> <?=$seferPrice?> </h5>
+                <?php if($gotPrice === true) :?>
+                <h5><?=$seferPrice?> </h5>
                 <?php endif ?>
             </div>
         </form> 
          <form class="form-inline form-style" method="POST">
             <div class="form-group">
-                <label for="deleteN">Pick a sefer you want to Delete: </label>
+                <label id="label" for="deleteN">Pick a sefer you want to Delete: </label>
                 <select name="deleteN">               
                     <?php foreach($sefarimNames as $Name){
                         echo"<option>".$Name."</option>";
@@ -53,8 +53,8 @@
                     ?>
                 </select>
                 <button id="button" type="submit" name="deleteB" class="btn btn-danger">DELETE</button>
-                <?php if(isset($_POST["deleteB"])):?>
-                <h1> <?= "$nameDel was deleted from the db" ?> </h1>
+                <?php if($deleted === true ):?>
+                <h5><?= strtoupper($nameDel)?> was deleted from the db </h5>
                 <?php endif ?>
             </div>             
         </form>
