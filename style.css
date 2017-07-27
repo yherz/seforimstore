@@ -1,0 +1,37 @@
+
+
+.jumbotron{
+    background-image:url("images/back.png");
+  text-align: center;
+}
+.jumbotron h1{
+    padding:10px 25px;
+}
+.jumbotron h3{
+    display:inline;
+    padding:10px 25px;
+    background-color:grey;
+    color:white;
+}
+a img{
+    border: 5px solid lightgrey;
+    margin-top: 15px;
+}
+a img:hover{
+    margin-top: 2px;
+    opacity:0.5;
+}
+
+/*admin form*/
+.form-style{
+    padding:20px;
+     background-color:lightsteelblue;
+    
+     }
+#button{
+    margin-left:20px;
+}
+
+tbody tr:nth-child(odd) {
+   background-color: lightsalmon;
+}
